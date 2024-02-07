@@ -12,8 +12,28 @@ This is a Ruby on Rails application. I use a local webserver to access the CMS. 
 
 ## Getting Started
 
-db commands - given we check in the sqlite db
-running tests
+Install dependencies:
+
+```sh
+bundle
+brew install vips
+```
+
+Since we only have one environment (development/local) and have checked the sqlite db, it is already set up. 
+
+If you want to confirm things are working as expected, you can run:
+
+```sh
+bin/rails db:migrate
+bin/rails db:setup
+```
+
+Running tests:
+
+```sh
+bin/rails test
+```
+
 ...
 
 ## CMS Usage
@@ -25,12 +45,12 @@ bin/rails s
 
 ## TODO
 
-- [ ] create a single data model
-  - [ ] model it
-  - [ ] migration
-  - [ ] code
-  - [ ] tests
-  - [ ] seed with data
+- [x] create a single data model
+  - [x] model it
+  - [x] migration
+  - [x] code
+  - [x] tests
+  - [x] seed with data
 - [ ] create a simple publishing workflow
   - [ ] publish the data
   - [ ] publish the schema
