@@ -34,10 +34,8 @@ The CMS should ideally have a very basic publication pipeline so that I can make
 
 ## TODO
 
-* create the data folder structure
-* rails new the cms
-  * create a single data model
-  * create a simple publishing workflow
-* pick something for the front end and initialise it
-  * create a debug display that reads from the data
-* meta/config project files
+- [x] create the data folder structure
+- [x] rails new the cms
+- [ ] pick something for the front end and initialise it
+  - [ ] create a debug display that reads from the data
+- [ ] meta/config project files

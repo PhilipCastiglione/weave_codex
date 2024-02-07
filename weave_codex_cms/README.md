@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Weave Codex CMS, or at least the first version of it.
 
-Things you may want to cover:
+This exists for me to create and manage data for the Weave Codex, and publish it to make it available for the static website front end project.
 
-* Ruby version
+## Architecture
 
-* System dependencies
+This is a Ruby on Rails application. I use a local webserver to access the CMS. The server is not deployed, instead the sqlite db and published output are checked in to version control.
 
-* Configuration
+* SQLite database
 
-* Database creation
+## Getting Started
 
-* Database initialization
+db commands - given we check in the sqlite db
+running tests
+...
 
-* How to run the test suite
+## CMS Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+bin/rails s
+```
+...
 
-* Deployment instructions
+## TODO
 
-* ...
+- [ ] create a single data model
+  - [ ] model it
+  - [ ] migration
+  - [ ] code
+  - [ ] tests
+  - [ ] seed with data
+- [ ] create a simple publishing workflow
+  - [ ] publish the data
+  - [ ] publish the schema
+- [ ] pick a cms gem
+- [ ] linting
+- [ ] formatting
