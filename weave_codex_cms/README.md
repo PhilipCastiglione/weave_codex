@@ -52,7 +52,7 @@ bin/rails s
   - [x] tests
   - [x] seed with data
 - [ ] create a simple publishing workflow
-  - [ ] publish the data
+  - [x] publish the data
   - [ ] publish the schema
 - [ ] pick a cms gem
 - [ ] linting
