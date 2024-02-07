@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   resources :faunas
 
+  # static publish route
+  post "/static/publish", to: "static#publish"
+
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "static#index"
 end

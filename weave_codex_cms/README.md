@@ -57,3 +57,4 @@ bin/rails s
 - [ ] pick a cms gem
 - [ ] linting
 - [ ] formatting
+- [ ] enhance the publishing workflow to indicate what is dirty
