@@ -39,5 +39,10 @@ You can preview the production build with `npm run preview`.
 
 ## TODO
 
-- [ ] configure for SSG
-- [ ] create a debug display that reads from the data
+- [x] configure for SSG
+- [x] create a debug display that reads from the data
+- [ ] set up deployment via GH actions (https://kit.svelte.dev/docs/adapter-static & https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+- [ ] read type data for entities
+- [ ] linting
+- [ ] formatting
+- [ ] tests
