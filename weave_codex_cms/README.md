@@ -53,8 +53,32 @@ bin/rails s
   - [x] seed with data
 - [ ] create a simple publishing workflow
   - [x] publish the data
-  - [ ] publish the schema
+  - [ ] publish type data
 - [ ] pick a cms gem
 - [ ] linting
 - [ ] formatting
+- [ ] tests
 - [ ] enhance the publishing workflow to indicate what is dirty
+- [ ] publish versions & backups
+
+### Modelling
+
+MapRegion - should map something to an area on the map, at a given layer - probably drawn svgs? could be multiple
+MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ...
+
+Groups - eg Lunaria, Palladia, Freedom, the Dhow, ...
+Subgroup (maybe this is just groups self join) - Palladian factions, clans, Lunarian tribes, ...
+Species
+Individual People
+City
+
+Flora
+Fauna
+
+Biome
+
+Plane? eg. Tapestry vs Weft
+
+Displayed, undisplayed 
+
+Military stuff
