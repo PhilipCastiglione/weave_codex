@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let data;
 </script>
 
@@ -8,6 +8,6 @@
 {#each Object.keys(data) as entityName}
   <h2>{entityName}</h2>
   {#each data[entityName] as entity (entity.id)}
-    <p>{entity.id}: {entity.name}</p>
+    <p>{entity.id}: {entity.name} - {@html entity.description}</p>
   {/each}
 {/each}

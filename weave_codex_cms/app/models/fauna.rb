@@ -13,4 +13,12 @@ class Fauna < ApplicationRecord
   def self.publish_data
     all.with_rich_text_description_and_embeds.as_json
   end
+
+  def as_json
+    {
+      id: id,
+      name: name,
+      description: description.to_s
+    }
+  end
 end
