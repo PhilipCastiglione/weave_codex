@@ -51,15 +51,26 @@ bin/rails s
   - [x] code
   - [x] tests
   - [x] seed with data
-- [ ] create a simple publishing workflow
+- [x] create a simple publishing workflow
   - [x] publish the data
-  - [ ] publish type data
-- [ ] pick a cms gem
+  - [x] publish type data
+- [x] db schema -> published schema? with types?
+  * https://github.com/ElMassimo/types_from_serializers
+  * https://github.com/ElMassimo/oj_serializers
+  OR
+  * https://github.com/kgiszczak/shale
+  * https://github.com/bcherny/json-schema-to-typescript
+  [x] unfortunately I need to roll my own
+- [ ] do I need a gem to give me more than the scaffold behaviour?
+  - [ ] or change the scaffold?
+  - [ ] a bit of styling...
 - [ ] linting
 - [ ] formatting
 - [ ] tests
 - [ ] enhance the publishing workflow to indicate what is dirty
 - [ ] publish versions & backups
+- [ ] string enums
+- [ ] image fields
 
 ### Modelling
 

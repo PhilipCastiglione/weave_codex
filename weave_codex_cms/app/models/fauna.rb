@@ -22,11 +22,26 @@ class Fauna < ApplicationRecord
     end
   end
 
-  def as_json
-    {
-      id: id,
-      name: name,
-      description: description.to_s
+  def self.publish_types
+    attrs = {
+      id: "number",
+      diet: "string",
+      habitat: "string",
+      name: "string",
+      threat_model: "string",
+      description: "string",
+      created_at: "Date",
+      updated_at: "Date"
     }
+
+    types = ""
+
+    types += "export default interface Fauna {\n"
+    attrs.each do |attr, type|
+      types += "  #{attr}: #{type}\n"
+    end
+    types += "}\n"
+
+    types
   end
 end
