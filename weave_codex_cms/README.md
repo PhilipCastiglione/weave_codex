@@ -9,6 +9,7 @@ This exists for me to create and manage data for the Weave Codex, and publish it
 This is a Ruby on Rails application. I use a local webserver to access the CMS. The server is not deployed, instead the sqlite db and published output are checked in to version control.
 
 * SQLite database
+* Administrate gem with minor customisation to generate CRUD views from configuration
 
 ## Getting Started
 
@@ -19,7 +20,7 @@ bundle
 brew install vips
 ```
 
-Since we only have one environment (development/local) and have checked the sqlite db, it is already set up. 
+Since we only have one environment (development/local) and have checked in the sqlite db, it is already set up. 
 
 If you want to confirm things are working as expected, you can run:
 
@@ -41,40 +42,21 @@ bin/rails test
 ```sh
 bin/rails s
 ```
-...
+
+Visit http://127.0.0.1:3000/admin
 
 ## TODO
 
-- [x] create a single data model
-  - [x] model it
-  - [x] migration
-  - [x] code
-  - [x] tests
-  - [x] seed with data
-- [x] create a simple publishing workflow
-  - [x] publish the data
-  - [x] publish type data
-- [x] db schema -> published schema? with types?
-  * https://github.com/ElMassimo/types_from_serializers
-  * https://github.com/ElMassimo/oj_serializers
-  OR
-  * https://github.com/kgiszczak/shale
-  * https://github.com/bcherny/json-schema-to-typescript
-  [x] unfortunately I need to roll my own
-- [x] add [administrate](https://github.com/thoughtbot/administrate)
-  - [x] configure
-  - [x] set up faunas
-  - [x] set up a dashboard
-  - [x] remove non admin content for faunas
 - [ ] make rich text admininistrate fields work
   * support is coming shortly: https://github.com/thoughtbot/administrate/pull/2411
+- [ ] pluralisation for fauna because faunas is killing me
 - [ ] linting
 - [ ] formatting
 - [ ] tests
 - [ ] enhance the publishing workflow to indicate what is dirty
 - [ ] publish versions & backups
-- [ ] string enums
-- [ ] image fields
+- [ ] string enums (...when I need one)
+- [ ] image fields/attachments
 
 ### Modelling
 
