@@ -63,6 +63,11 @@ bin/rails s
   [x] unfortunately I need to roll my own
 - [x] add [administrate](https://github.com/thoughtbot/administrate)
   - [x] configure
+  - [x] set up faunas
+  - [ ] set up a dashboard
+  - [ ] remove non admin content for faunas
+- [ ] make rich text admininistrate fields work
+  * support is coming shortly: https://github.com/thoughtbot/administrate/pull/2411
 - [ ] linting
 - [ ] formatting
 - [ ] tests

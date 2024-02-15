@@ -14,7 +14,6 @@ class Fauna < ApplicationRecord
   has_rich_text :description
   
   validates :name, presence: true
-  # diet types: https://en.wikipedia.org/wiki/List_of_feeding_behaviours
 
   def self.publish_data
     all.with_rich_text_description_and_embeds.map do |fauna|
