@@ -61,9 +61,8 @@ bin/rails s
   * https://github.com/kgiszczak/shale
   * https://github.com/bcherny/json-schema-to-typescript
   [x] unfortunately I need to roll my own
-- [ ] do I need a gem to give me more than the scaffold behaviour?
-  - [ ] or change the scaffold?
-  - [ ] a bit of styling...
+- [x] add [administrate](https://github.com/thoughtbot/administrate)
+  - [x] configure
 - [ ] linting
 - [ ] formatting
 - [ ] tests
