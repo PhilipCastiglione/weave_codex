@@ -22,12 +22,9 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-# In this case we do not ignore storage (uploaded files in development and any SQLite databases).
-# /storage/*
-# !/storage/.keep
-# /tmp/storage/*
-# !/tmp/storage/
-# !/tmp/storage/.keep
+# Ignore temporary sqlite files.
+/storage/*.sqlite3-wal
+/storage/*.sqlite3-shm
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
