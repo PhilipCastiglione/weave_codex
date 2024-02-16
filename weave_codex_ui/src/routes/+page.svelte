@@ -10,3 +10,8 @@
 {#each data.Fauna as fauna}
   <p>{fauna.id}: {fauna.name} - {@html fauna.description}</p>
 {/each}
+
+<h2>Flora</h2>
+{#each data.Flora as flora}
+  <p>{flora.id}: {flora.name} - {@html flora.description}</p>
+{/each}
