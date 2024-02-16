@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: species
+#
+#  id         :integer          not null, primary key
+#  diet       :string
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  diet: MyString
+
+two:
+  name: MyString
+  diet: MyString

@@ -15,3 +15,8 @@
 {#each data.Flora as flora}
   <p>{flora.id}: {flora.name} - {@html flora.description}</p>
 {/each}
+
+<h2>Species</h2>
+{#each data.Species as species}
+  <p>{species.id}: {species.name} - {@html species.description}</p>
+{/each}

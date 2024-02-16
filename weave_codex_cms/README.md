@@ -47,39 +47,45 @@ Visit http://127.0.0.1:3000/admin
 
 ## TODO
 
+### Features
+
 - [ ] make rich text admininistrate fields work
   * support is coming shortly: https://github.com/thoughtbot/administrate/pull/2411
-- [ ] pluralisation for fauna because faunas is killing me
-- [ ] linting
-- [ ] formatting
-- [ ] tests
 - [ ] enhance the publishing workflow to indicate what is dirty
 - [ ] publish versions & backups
 - [ ] string enums (...when I need one)
 - [ ] image fields/attachments
 
+### Hygiene
+
+- [ ] pluralisation for fauna because faunas is killing me
+- [ ] linting
+- [ ] formatting
+- [ ] tests
+
 ### Modelling
 
 #### Entities
 
-* ~~Flora~~
-* ~~Fauna~~
-* Groups - eg Lunaria, Palladia, Freedom, the Dhow, ...
-* Subgroup (maybe this is just groups self join)
-  * Palladian factions, clans, Lunarian tribes, ...
-* Species
-* Individual People
-* City
-* Biome
-* Military stuff
+- [x] Flora
+- [x] Fauna
+- [x] Species
+- [ ] Domain - eg Lunaria, Palladia, Freedom, the Dhow, ...
+- [ ] Subgroup (maybe this is just groups self join)
+  - [ ] Palladian factions, clans, Lunarian tribes, ...
+- [ ] Species
+- [ ] Individual People
+- [ ] City
+- [ ] Biome
+- [ ] Military stuff
 
 #### Layers, Filters
 
-* MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ..., people/flora/fauna/climate
-* Plane? eg. Tapestry vs Weft
-* Displayed, undisplayed
-* Time
+- [ ] MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ..., people/flora/fauna/climate
+- [ ] Plane? eg. Tapestry vs Weft
+- [ ] Displayed, undisplayed
+- [ ] Time
 
 #### Connections
 
-* MapRegion - should map something to an area on the map, at a given layer - probably drawn svgs? could be multiple
+- [ ] MapRegion - should map something to an area on the map, at a given layer - probably drawn svgs? could be multiple

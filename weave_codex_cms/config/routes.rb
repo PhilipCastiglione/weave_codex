@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :stats, only: [:index]
     resources :faunas
     resources :floras
+    resources :species
 
     root to: "stats#index"
   end

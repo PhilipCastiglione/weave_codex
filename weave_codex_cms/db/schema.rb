@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_16_013027) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_16_081514) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -61,6 +61,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_16_013027) do
   create_table "floras", force: :cascade do |t|
     t.string "name"
     t.string "habitat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+    t.string "diet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
