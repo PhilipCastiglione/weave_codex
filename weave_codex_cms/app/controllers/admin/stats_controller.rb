@@ -5,7 +5,7 @@ module Admin
         {
           "name": model.name,
           "count": model.count,
-          "link": admin_faunas_path,
+          "link": url_for(action: "index", controller: "/admin/#{model.name.underscore.pluralize}"),
         }
       end
     end
