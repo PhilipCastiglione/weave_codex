@@ -60,22 +60,26 @@ Visit http://127.0.0.1:3000/admin
 
 ### Modelling
 
-MapRegion - should map something to an area on the map, at a given layer - probably drawn svgs? could be multiple
-MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ...
+#### Entities
 
-Groups - eg Lunaria, Palladia, Freedom, the Dhow, ...
-Subgroup (maybe this is just groups self join) - Palladian factions, clans, Lunarian tribes, ...
-Species
-Individual People
-City
+* ~~Flora~~
+* ~~Fauna~~
+* Groups - eg Lunaria, Palladia, Freedom, the Dhow, ...
+* Subgroup (maybe this is just groups self join)
+  * Palladian factions, clans, Lunarian tribes, ...
+* Species
+* Individual People
+* City
+* Biome
+* Military stuff
 
-Flora
-Fauna
+#### Layers, Filters
 
-Biome
+* MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ..., people/flora/fauna/climate
+* Plane? eg. Tapestry vs Weft
+* Displayed, undisplayed
+* Time
 
-Plane? eg. Tapestry vs Weft
+#### Connections
 
-Displayed, undisplayed 
-
-Military stuff
+* MapRegion - should map something to an area on the map, at a given layer - probably drawn svgs? could be multiple
