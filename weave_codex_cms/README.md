@@ -70,21 +70,32 @@ Visit http://127.0.0.1:3000/admin
 - [x] Flora
 - [x] Fauna
 - [x] Species
-- [ ] Domain - eg Lunaria, Palladia, Freedom, the Dhow, ...
-- [ ] Subgroup (maybe this is just groups self join)
-  - [ ] Palladian factions, clans, Lunarian tribes, ...
-- [ ] Species
-- [ ] Individual People
+- [x] Domain
+- [ ] Domain / Species ref
+- [ ] DomainGroup
+  * name
+  * type (religion, political, ...)
+  * description
+  * membership
+  * domain ref
+  * self join?
+  * Palladian factions, clans, Lunarian tribes, ...
+- [ ] Domain / DomainGroup ref
+- [ ] Individuals
+  * name
 - [ ] City
+  * name
 - [ ] Biome
-- [ ] Military stuff
+  * name
+- [ ] Military stuff?
 
 #### Layers, Filters
 
-- [ ] MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ..., people/flora/fauna/climate
 - [ ] Plane? eg. Tapestry vs Weft
+- [ ] MapLayer - 3d topography; eg mountains, surface, caves, the underworld, ..., people/flora/fauna/climate
 - [ ] Displayed, undisplayed
-- [ ] Time
+- [ ] Time (n key points, not a slider)
+- [ ] Military
 
 #### Connections
 

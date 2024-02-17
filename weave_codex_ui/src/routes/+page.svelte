@@ -6,6 +6,11 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
+<h2>Domain</h2>
+{#each data.Domain as domain}
+  <p>{domain.id}: {domain.name} - {@html domain.description}</p>
+{/each}
+
 <h2>Fauna</h2>
 {#each data.Fauna as fauna}
   <p>{fauna.id}: {fauna.name} - {@html fauna.description}</p>
