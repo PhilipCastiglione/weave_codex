@@ -9,6 +9,10 @@
 <h2>Domain</h2>
 {#each data.Domain as domain}
   <p>{domain.id}: {domain.name} - {@html domain.description}</p>
+  <p>
+    Species:
+    {domain.species_ids.map(species_id => data.Species.find(s => s.id === species_id)?.name).join(", ")}
+  </p>
 {/each}
 
 <h2>Fauna</h2>
@@ -24,4 +28,8 @@
 <h2>Species</h2>
 {#each data.Species as species}
   <p>{species.id}: {species.name} - {@html species.description}</p>
+  <p>
+    Domains:
+    {species.domain_ids.map(domain_id => data.Domain.find(s => s.id === domain_id)?.name).join(", ")}
+  </p>
 {/each}

@@ -14,6 +14,7 @@ class DomainDashboard < Administrate::BaseDashboard
     rich_text_philosophy_religion_and_magic: Field::Text, # TODO: change this to a rich text field and add to the form attributes
     rich_text_politics_economics_and_law: Field::Text, # TODO: change this to a rich text field and add to the form attributes
     rich_text_sociocultural: Field::Text, # TODO: change this to a rich text field and add to the form attributes
+    species: Field::HasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -33,6 +34,7 @@ class DomainDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    species
     rich_text_description
     rich_text_philosophy_religion_and_magic
     rich_text_politics_economics_and_law
@@ -45,6 +47,7 @@ class DomainDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    species
     name
   ].freeze
 

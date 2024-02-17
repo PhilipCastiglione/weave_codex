@@ -10,6 +10,7 @@ class SpeciesDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     diet: Field::String,
+    domains: Field::HasMany,
     name: Field::String,
     rich_text_description: Field::Text, # TODO: change this to a rich text field and add to the form attributes
     created_at: Field::DateTime,
@@ -31,6 +32,7 @@ class SpeciesDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    domains
     diet
     rich_text_description
     created_at
@@ -42,6 +44,7 @@ class SpeciesDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
+    domains
     diet
   ].freeze
 

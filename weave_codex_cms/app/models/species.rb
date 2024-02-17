@@ -9,19 +9,25 @@
 #  updated_at :datetime         not null
 #
 class Species < ApplicationRecord
+  has_and_belongs_to_many :domains
+
   has_rich_text :description
 
   validates :name, presence: true
 
   def self.publish_data
-    all.with_rich_text_description_and_embeds.map do |species|
-      species.as_json.merge({ description: species.description.body.to_s })
+    all.includes(:domains).with_rich_text_description_and_embeds.map do |species|
+      species.as_json.merge({
+        domain_ids: species.domains.map(&:id),
+        description: species.description.body.to_s,
+      })
     end
   end
 
   def self.publish_types
     attrs = {
       id: "number",
+      domain_ids: "number[]",
       name: "string",
       description: "string",
       created_at: "Date",

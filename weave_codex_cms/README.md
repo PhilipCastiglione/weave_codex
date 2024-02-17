@@ -58,7 +58,7 @@ Visit http://127.0.0.1:3000/admin
 
 ### Hygiene
 
-- [ ] pluralisation for fauna because faunas is killing me
+- [ ] pluralisation (inflections) because faunas is killing me
 - [ ] linting
 - [ ] formatting
 - [ ] tests
@@ -71,7 +71,7 @@ Visit http://127.0.0.1:3000/admin
 - [x] Fauna
 - [x] Species
 - [x] Domain
-- [ ] Domain / Species ref
+- [x] Domain / Species ref
 - [ ] DomainGroup
   * name
   * type (religion, political, ...)
