@@ -3,6 +3,7 @@ module Constants
     Domain,
     Fauna,
     Flora,
+    Organization,
     Species,
   ]
 end

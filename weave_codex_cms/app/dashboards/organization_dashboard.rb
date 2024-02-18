@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class DomainDashboard < Administrate::BaseDashboard
+class OrganizationDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,13 +9,13 @@ class DomainDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    children: Field::HasMany,
+    classification: Field::String,
+    domain: Field::BelongsTo,
+    membership_numbers: Field::Number,
     name: Field::String,
+    parent: Field::BelongsTo,
     rich_text_description: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    rich_text_philosophy_religion_and_magic: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    rich_text_politics_economics_and_law: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    rich_text_sociocultural: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    organizations: Field::HasMany,
-    species: Field::HasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -35,12 +35,12 @@ class DomainDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
-    species
-    organizations
+    domain
+    classification
+    membership_numbers
+    parent
+    children
     rich_text_description
-    rich_text_philosophy_religion_and_magic
-    rich_text_politics_economics_and_law
-    rich_text_sociocultural
     created_at
     updated_at
   ].freeze
@@ -50,8 +50,11 @@ class DomainDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
-    species
-    organizations
+    domain
+    classification
+    membership_numbers
+    parent
+    children
   ].freeze
 
   # COLLECTION_FILTERS
@@ -66,10 +69,10 @@ class DomainDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how domains are displayed
+  # Overwrite this method to customize how organizations are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(domain)
-    "Domain #{domain.name} (##{domain.id})"
+  def display_resource(organization)
+    "Organization #{organization.name} (##{organization.id})"
   end
 end

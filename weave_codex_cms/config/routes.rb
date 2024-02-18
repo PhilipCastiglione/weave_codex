@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :domains
     resources :faunas
     resources :floras
+    resources :organizations
     resources :species
 
     root to: "stats#index"

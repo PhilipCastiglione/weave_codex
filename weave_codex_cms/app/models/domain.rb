@@ -9,6 +9,7 @@
 #
 class Domain < ApplicationRecord
   has_and_belongs_to_many :species
+  has_many :organizations, dependent: :destroy
 
   has_rich_text :description
   has_rich_text :sociocultural
@@ -18,9 +19,10 @@ class Domain < ApplicationRecord
   validates :name, presence: true
 
   def self.publish_data
-    all.includes(:species).with_all_rich_text.map do |domain|
+    all.includes(:species, :organizations).with_all_rich_text.map do |domain|
       domain.as_json.merge({
         species_ids: domain.species.map(&:id),
+        organization_ids: domain.organizations.map(&:id),
         description: domain.description.body.to_s,
         sociocultural: domain.sociocultural.body.to_s,
         politics_economics_and_law: domain.politics_economics_and_law.body.to_s,
@@ -34,6 +36,7 @@ class Domain < ApplicationRecord
       id: "number",
       name: "string",
       species_ids: "number[]",
+      organization_ids: "number[]",
       description: "string",
       sociocultural: "string",
       politics_economics_and_law: "string",

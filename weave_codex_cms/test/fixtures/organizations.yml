@@ -1,0 +1,37 @@
+# == Schema Information
+#
+# Table name: organizations
+#
+#  id                 :integer          not null, primary key
+#  classification     :string
+#  membership_numbers :integer
+#  name               :string
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  domain_id          :integer          not null
+#  parent_id          :integer
+#
+# Indexes
+#
+#  index_organizations_on_domain_id  (domain_id)
+#  index_organizations_on_parent_id  (parent_id)
+#
+# Foreign Keys
+#
+#  domain_id  (domain_id => domains.id)
+#  parent_id  (parent_id => organizations.id)
+#
+
+one:
+  name: MyString
+  classification: MyString
+  membership_numbers: 1
+  domain: one
+  organization: one
+
+two:
+  name: MyString
+  classification: MyString
+  membership_numbers: 1
+  domain: two
+  organization: two

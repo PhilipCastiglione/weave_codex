@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_17_222651) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_17_225138) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -78,6 +78,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_222651) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "organizations", force: :cascade do |t|
+    t.string "name"
+    t.string "classification"
+    t.integer "membership_numbers"
+    t.integer "domain_id", null: false
+    t.integer "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["domain_id"], name: "index_organizations_on_domain_id"
+    t.index ["parent_id"], name: "index_organizations_on_parent_id"
+  end
+
   create_table "species", force: :cascade do |t|
     t.string "name"
     t.string "diet"
@@ -87,4 +99,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_222651) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "organizations", "domains"
+  add_foreign_key "organizations", "organizations", column: "parent_id"
 end

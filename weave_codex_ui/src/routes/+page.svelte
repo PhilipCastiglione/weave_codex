@@ -6,12 +6,16 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
-<h2>Domain</h2>
+<h2>Domains</h2>
 {#each data.Domain as domain}
   <p>{domain.id}: {domain.name} - {@html domain.description}</p>
   <p>
     Species:
     {domain.species_ids.map(species_id => data.Species.find(s => s.id === species_id)?.name).join(", ")}
+  </p>
+  <p>
+    Organizations:
+    {domain.organization_ids.map(organization_id => data.Organization.find(o => o.id === organization_id)?.name).join(", ")}
   </p>
 {/each}
 
@@ -23,6 +27,11 @@
 <h2>Flora</h2>
 {#each data.Flora as flora}
   <p>{flora.id}: {flora.name} - {@html flora.description}</p>
+{/each}
+
+<h2>Organizations</h2>
+{#each data.Organization as organization}
+  <p>{organization.id}: {organization.name} - {@html organization.description}</p>
 {/each}
 
 <h2>Species</h2>

@@ -58,10 +58,12 @@ Visit http://127.0.0.1:3000/admin
 
 ### Hygiene
 
-- [ ] pluralisation (inflections) because faunas is killing me
+- [ ] publishable abstraction
+- [ ] pluralisation (inflections) because faunas is killing me (make entities.model pluralized)
 - [ ] linting
 - [ ] formatting
 - [ ] tests
+- [ ] move publishing into an admin page, make the admin page the app root, remove back to app link
 
 ### Modelling
 
@@ -72,18 +74,10 @@ Visit http://127.0.0.1:3000/admin
 - [x] Species
 - [x] Domain
 - [x] Domain / Species ref
-- [ ] DomainGroup
-  * name
-  * type (religion, political, ...)
-  * description
-  * membership
-  * domain ref
-  * self join?
-  * Palladian factions, clans, Lunarian tribes, ...
-- [ ] Domain / DomainGroup ref
-- [ ] Individuals
-  * name
+- [x] Organization
 - [ ] City
+  * name
+- [ ] Individuals
   * name
 - [ ] Biome
   * name
