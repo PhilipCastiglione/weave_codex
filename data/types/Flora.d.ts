@@ -1,8 +1,8 @@
 export default interface Flora {
-  id: number
-  habitat: string
-  name: string
   description: string
+  id: number
+  name: string
+  habitat: string
   created_at: Date
   updated_at: Date
 }

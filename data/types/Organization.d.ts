@@ -1,10 +1,12 @@
-export default interface Domain {
+export default interface Organization {
+  child_ids: number[]
+  description: string
   id: number
   name: string
+  classification: string
+  membership_numbers: number
   domain_id: number
   parent_id: number
-  children_ids: number[]
-  description: string
   created_at: Date
   updated_at: Date
 }

@@ -1,7 +1,7 @@
 module Admin
   class StatsController < Admin::ApplicationController
     def index
-      @stats = Constants::PUBLISHABLE_MODELS.map do |model|
+      @stats = Publisher.registered_models.map do |model|
         {
           "name": model.name,
           "count": model.count,
