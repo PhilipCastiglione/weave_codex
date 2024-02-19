@@ -1,43 +1,53 @@
-require 'set'
+# frozen_string_literal: true
 
 module Publisher
   REGISTERED_MODELS = Set.new
 
-  def self.registered_models
-    REGISTERED_MODELS.to_a
-  end
-
-  def self.register(model)
-    REGISTERED_MODELS.add(model)
-  end
-
-  def self.publish
-    entities_publish_data = REGISTERED_MODELS.each_with_object({}) do |model, obj|
-      obj[model.name] = model.publish_data
+  class << self
+    def registered_models
+      REGISTERED_MODELS.to_a
     end
 
-    File.open(Rails.root.parent.join("data", "entities.json"), "w") do |file|
-      file.write(entities_publish_data.to_json)
+    def register(model)
+      REGISTERED_MODELS.add(model)
     end
 
-    entities_publish_types = REGISTERED_MODELS.each do |model|
-      File.open(Rails.root.parent.join("data", "types", "#{model.name}.d.ts"), "w") do |file|
-        file.write(model.publish_types)
+    def publish
+      publish_entities_data
+      publish_model_type_declarations
+      publish_entities_type_declaration
+    end
+
+    def publish_entities_data
+      entities_data = REGISTERED_MODELS.each_with_object({}) do |model, obj|
+        obj[model.name] = model.publish_data
       end
+
+      File.write(Rails.root.parent.join('data', 'entities.json'), entities_data.to_json)
     end
 
-    File.open(Rails.root.parent.join("data", "types", "Entities.d.ts"), "w") do |file|
+    def publish_model_type_declarations
       REGISTERED_MODELS.each do |model|
-        file.write("import type #{model.name} from './#{model.name}'\n")
+        File.write(Rails.root.parent.join('data', 'types', "#{model.name}.d.ts"), model.publish_types)
       end
-      
-      file.write("\nexport default interface Entities {\n")
-      
-      REGISTERED_MODELS.each do |model|
-        file.write("  #{model.name}: #{model.name}[]\n")
-      end
+    end
 
-      file.write("}\n")
+    def publish_entities_type_declaration
+      File.open(Rails.root.parent.join('data', 'types', 'Entities.d.ts'), 'w') do |file|
+        REGISTERED_MODELS.each do |model|
+          file.write("import type #{model.name} from './#{model.name}'\n")
+        end
+
+        file.write("\nexport default interface Entities {\n")
+
+        REGISTERED_MODELS.each do |model|
+          file.write("  #{model.name}: #{model.name}[]\n")
+        end
+
+        file.write("}\n")
+      end
     end
   end
+
+  private_class_method :publish_entities_data, :publish_model_type_declarations, :publish_entities_type_declaration
 end

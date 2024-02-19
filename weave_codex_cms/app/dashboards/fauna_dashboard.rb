@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class FaunaDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -12,10 +14,10 @@ class FaunaDashboard < Administrate::BaseDashboard
     diet: Field::String,
     habitat: Field::String,
     name: Field::String,
-    rich_text_description: Field::Text, # TODO: change this to a rich text field and add to the form attributes
+    rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     threat_model: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

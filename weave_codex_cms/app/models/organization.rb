@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: organizations
@@ -25,10 +27,10 @@ class Organization < ApplicationRecord
   include Publishable
 
   belongs_to :domain
-  belongs_to :parent, class_name: "Organization", optional: true
-  has_many :children, class_name: "Organization", foreign_key: "parent_id", dependent: :nullify
+  belongs_to :parent, class_name: 'Organization', optional: true
+  has_many :children, class_name: 'Organization', foreign_key: 'parent_id', dependent: :nullify
 
   has_rich_text :description
-  
+
   validates :name, presence: true
 end

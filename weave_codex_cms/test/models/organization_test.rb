@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: organizations
@@ -21,7 +23,7 @@
 #  domain_id  (domain_id => domains.id)
 #  parent_id  (parent_id => organizations.id)
 #
-require "test_helper"
+require 'test_helper'
 
 class OrganizationTest < ActiveSupport::TestCase
   # test "the truth" do

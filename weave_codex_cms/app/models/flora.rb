@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: floras
@@ -12,6 +14,6 @@ class Flora < ApplicationRecord
   include Publishable
 
   has_rich_text :description
-  
+
   validates :name, presence: true
 end

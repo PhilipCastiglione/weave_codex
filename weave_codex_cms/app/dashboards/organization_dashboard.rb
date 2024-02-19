@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class OrganizationDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -15,9 +17,9 @@ class OrganizationDashboard < Administrate::BaseDashboard
     membership_numbers: Field::Number,
     name: Field::String,
     parent: Field::BelongsTo,
-    rich_text_description: Field::Text, # TODO: change this to a rich text field and add to the form attributes
+    rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

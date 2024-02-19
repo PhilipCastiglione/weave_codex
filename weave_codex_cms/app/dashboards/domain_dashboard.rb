@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class DomainDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -10,14 +12,14 @@ class DomainDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
-    rich_text_description: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    rich_text_philosophy_religion_and_magic: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    rich_text_politics_economics_and_law: Field::Text, # TODO: change this to a rich text field and add to the form attributes
-    rich_text_sociocultural: Field::Text, # TODO: change this to a rich text field and add to the form attributes
+    rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
+    rich_text_philosophy_religion_and_magic: Field::Text, # TODO: change to rtf and add to form attributes
+    rich_text_politics_economics_and_law: Field::Text, # TODO: change to rtf and add to form attributes
+    rich_text_sociocultural: Field::Text, # TODO: change to rtf and add to form attributes
     organizations: Field::HasMany,
     species: Field::HasMany,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

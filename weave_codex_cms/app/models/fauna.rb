@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: faunas
@@ -14,6 +16,6 @@ class Fauna < ApplicationRecord
   include Publishable
 
   has_rich_text :description
-  
+
   validates :name, presence: true
 end

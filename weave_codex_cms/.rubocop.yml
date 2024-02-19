@@ -1,0 +1,20 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "db/schema.rb"
+    - "bin/*"
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  AllowedMethods:
+    - class_methods
+
+Metrics/MethodLength:
+  AllowedMethods:
+    - change
+
+Metrics/AbcSize:
+  AllowedMethods:
+    - change

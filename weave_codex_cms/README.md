@@ -35,6 +35,17 @@ Running tests:
 bin/rails test
 ```
 
+Linting:
+
+```sh
+rubocop -a
+```
+
+Formatting:
+
+Configure VS Code to use RuboCop autoformatting, by following instructions
+[here](https://docs.rubocop.org/rubocop/usage/lsp.html).
+
 ...
 
 ## CMS Usage
@@ -58,10 +69,7 @@ Visit http://127.0.0.1:3000/admin
 
 ### Hygiene
 
-- [ ] publishable abstraction
 - [ ] pluralisation (inflections) because faunas is killing me (make entities.model pluralized)
-- [ ] linting
-- [ ] formatting
 - [ ] tests
 - [ ] move publishing into an admin page, make the admin page the app root, remove back to app link
 

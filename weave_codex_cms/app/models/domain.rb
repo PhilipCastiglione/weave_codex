@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: domains
@@ -17,6 +19,6 @@ class Domain < ApplicationRecord
   has_rich_text :sociocultural
   has_rich_text :politics_economics_and_law
   has_rich_text :philosophy_religion_and_magic
-  
+
   validates :name, presence: true
 end

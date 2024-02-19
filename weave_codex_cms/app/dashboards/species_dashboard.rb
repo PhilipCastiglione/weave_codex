@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class SpeciesDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -12,9 +14,9 @@ class SpeciesDashboard < Administrate::BaseDashboard
     diet: Field::String,
     domains: Field::HasMany,
     name: Field::String,
-    rich_text_description: Field::Text, # TODO: change this to a rich text field and add to the form attributes
+    rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
