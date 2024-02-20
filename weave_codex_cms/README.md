@@ -6,10 +6,13 @@ This exists for me to create and manage data for the Weave Codex, and publish it
 
 ## Architecture
 
-This is a Ruby on Rails application. I use a local webserver to access the CMS. The server is not deployed, instead the sqlite db and published output are checked in to version control.
+This is a Ruby on Rails application. I run a local webserver to access the CMS. The server is not deployed (because then I don't have to host anything).
+
+Instead the sqlite db and published output are checked in to version control.
 
 * SQLite database
 * Administrate gem with minor customisation to generate CRUD views from configuration
+* Custom publishing pipeline
 
 ## Getting Started
 
@@ -46,15 +49,13 @@ Formatting:
 Configure VS Code to use RuboCop autoformatting, by following instructions
 [here](https://docs.rubocop.org/rubocop/usage/lsp.html).
 
-...
-
 ## CMS Usage
 
 ```sh
 bin/rails s
 ```
 
-Visit http://127.0.0.1:3000/admin
+Visit http://127.0.0.1:3000
 
 ## TODO
 
@@ -62,8 +63,9 @@ Visit http://127.0.0.1:3000/admin
 
 - [ ] make rich text admininistrate fields work
   * support is coming shortly: https://github.com/thoughtbot/administrate/pull/2411
-- [ ] enhance the publishing workflow to indicate what is dirty
-- [ ] publish versions & backups
+- [ ] publishing
+  - [ ] enhance the workflow to indicate what is dirty/what will be published
+  - [ ] versions & backups
 - [ ] string enums (...when I need one)
 - [ ] image fields/attachments
 
@@ -77,12 +79,6 @@ Visit http://127.0.0.1:3000/admin
 
 #### Entities
 
-- [x] Flora
-- [x] Fauna
-- [x] Species
-- [x] Domain
-- [x] Domain / Species ref
-- [x] Organization
 - [ ] City
   * name
 - [ ] Individuals

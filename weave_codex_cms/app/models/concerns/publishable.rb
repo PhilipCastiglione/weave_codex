@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+# The Publishable concern can be included in any ActiveRecord model to include
+# that model in the publishing pipeline.
+#
+# The two public methods use AR reflection methods to gather the data and types
+# of the model's attributes and associations. The data is then used to generate
+# a JSON representation of the model's data and a TypeScript interface.
 module Publishable
   extend ActiveSupport::Concern
 
@@ -8,10 +14,6 @@ module Publishable
   end
 
   class_methods do
-    def reflections_to_include
-      reflections.keys - rich_text_association_names.map(&:to_s)
-    end
-
     def publish_data
       all
         .includes(reflections_to_include.map(&:to_sym))
@@ -34,6 +36,10 @@ module Publishable
     end
 
     private
+
+    def reflections_to_include
+      reflections.keys - rich_text_association_names.map(&:to_s)
+    end
 
     def instance_reflection_fields(instance)
       reflections_to_include.each_with_object({}) do |reflection, h|
