@@ -29,6 +29,7 @@ class Organization < ApplicationRecord
   belongs_to :domain
   belongs_to :parent, class_name: 'Organization', optional: true
   has_many :children, class_name: 'Organization', foreign_key: 'parent_id', dependent: :nullify
+  has_many :characters, dependent: :nullify
   has_and_belongs_to_many :cities
 
   has_rich_text :description

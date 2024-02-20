@@ -1,5 +1,6 @@
 export default interface Species {
   domain_ids: number[]
+  character_ids: number[]
   description: string
   id: number
   name: string

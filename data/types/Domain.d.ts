@@ -2,6 +2,7 @@ export default interface Domain {
   species_ids: number[]
   organization_ids: number[]
   city_ids: number[]
+  character_ids: number[]
   description: string
   sociocultural: string
   politics_economics_and_law: string

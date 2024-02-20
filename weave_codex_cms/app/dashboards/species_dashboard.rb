@@ -13,6 +13,7 @@ class SpeciesDashboard < Administrate::BaseDashboard
     id: Field::Number,
     diet: Field::String,
     domains: Field::HasMany,
+    characters: Field::HasMany,
     name: Field::String,
     rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     created_at: Field::DateTime,
@@ -35,6 +36,7 @@ class SpeciesDashboard < Administrate::BaseDashboard
     id
     name
     domains
+    characters
     diet
     rich_text_description
     created_at
@@ -47,6 +49,7 @@ class SpeciesDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     name
     domains
+    characters
     diet
   ].freeze
 

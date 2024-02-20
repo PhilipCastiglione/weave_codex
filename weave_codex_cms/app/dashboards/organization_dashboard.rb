@@ -12,6 +12,8 @@ class OrganizationDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     children: Field::HasMany,
+    characters: Field::HasMany,
+    cities: Field::HasMany,
     classification: Field::String,
     domain: Field::BelongsTo,
     membership_numbers: Field::Number,
@@ -42,6 +44,8 @@ class OrganizationDashboard < Administrate::BaseDashboard
     membership_numbers
     parent
     children
+    cities
+    characters
     rich_text_description
     created_at
     updated_at
@@ -57,6 +61,8 @@ class OrganizationDashboard < Administrate::BaseDashboard
     membership_numbers
     parent
     children
+    cities
+    characters
   ].freeze
 
   # COLLECTION_FILTERS

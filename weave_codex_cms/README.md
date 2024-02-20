@@ -79,8 +79,10 @@ Visit http://127.0.0.1:3000
 
 #### Entities
 
-- [ ] Individuals
-  * name
+- [ ] Character extensions
+  - [ ] what rich text fields?
+  - [ ] quotes
+  - [ ] relationships - join table plus either text or enum
 - [ ] Military stuff?
 
 #### Layers, Filters

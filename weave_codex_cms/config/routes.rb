@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :stats, only: [:index]
 
+    resources :biomes
+    resources :characters
     resources :cities
     resources :domains
     resources :faunas

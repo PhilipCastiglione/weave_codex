@@ -2,7 +2,7 @@
 
 require 'administrate/base_dashboard'
 
-class DomainDashboard < Administrate::BaseDashboard
+class CharacterDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -11,15 +11,14 @@ class DomainDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    domain: Field::BelongsTo,
     name: Field::String,
-    rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
-    rich_text_philosophy_religion_and_magic: Field::Text, # TODO: change to rtf and add to form attributes
-    rich_text_politics_economics_and_law: Field::Text, # TODO: change to rtf and add to form attributes
-    rich_text_sociocultural: Field::Text, # TODO: change to rtf and add to form attributes
-    organizations: Field::HasMany,
-    species: Field::HasMany,
-    cities: Field::HasMany,
-    characters: Field::HasMany,
+    organization: Field::BelongsTo,
+    species: Field::BelongsTo,
+    background: Field::Text, # TODO: change to rtf and add to form attributes
+    physical_description: Field::Text, # TODO: change to rtf and add to form attributes
+    personality: Field::Text, # TODO: change to rtf and add to form attributes
+    other_notes: Field::Text, # TODO: change to rtf and add to form attributes
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -40,13 +39,12 @@ class DomainDashboard < Administrate::BaseDashboard
     id
     name
     species
-    organizations
-    cities
-    characters
-    rich_text_description
-    rich_text_philosophy_religion_and_magic
-    rich_text_politics_economics_and_law
-    rich_text_sociocultural
+    domain
+    organization
+    background
+    physical_description
+    personality
+    other_notes
     created_at
     updated_at
   ].freeze
@@ -57,9 +55,8 @@ class DomainDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     name
     species
-    organizations
-    cities
-    characters
+    domain
+    organization
   ].freeze
 
   # COLLECTION_FILTERS
@@ -74,10 +71,10 @@ class DomainDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how domains are displayed
+  # Overwrite this method to customize how characters are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(domain)
-    "Domain #{domain.name} (##{domain.id})"
+  def display_resource(character)
+    "Character #{character.name} (##{character.id})"
   end
 end

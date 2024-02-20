@@ -14,6 +14,7 @@ class Species < ApplicationRecord
   include Publishable
 
   has_and_belongs_to_many :domains
+  has_many :characters, dependent: :destroy
 
   has_rich_text :description
 

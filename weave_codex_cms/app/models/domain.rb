@@ -15,6 +15,7 @@ class Domain < ApplicationRecord
   has_and_belongs_to_many :species
   has_many :organizations, dependent: :destroy
   has_many :cities, dependent: :destroy
+  has_many :characters, dependent: :destroy
 
   has_rich_text :description
   has_rich_text :sociocultural
