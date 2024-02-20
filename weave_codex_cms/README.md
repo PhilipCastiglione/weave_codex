@@ -81,8 +81,6 @@ Visit http://127.0.0.1:3000
 
 - [ ] Individuals
   * name
-- [ ] Biome
-  * name
 - [ ] Military stuff?
 
 #### Layers, Filters
