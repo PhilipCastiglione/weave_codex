@@ -2,24 +2,30 @@
 
 # == Schema Information
 #
-# Table name: domains
+# Table name: cities
 #
 #  id         :integer          not null, primary key
 #  name       :string
+#  population :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  domain_id  :integer          not null
 #
-class Domain < ApplicationRecord
+# Indexes
+#
+#  index_cities_on_domain_id  (domain_id)
+#
+# Foreign Keys
+#
+#  domain_id  (domain_id => domains.id)
+#
+class City < ApplicationRecord
   include Publishable
 
-  has_and_belongs_to_many :species
-  has_many :organizations, dependent: :destroy
-  has_many :cities, dependent: :destroy
+  belongs_to :domain
+  has_and_belongs_to_many :organizations
 
   has_rich_text :description
-  has_rich_text :sociocultural
-  has_rich_text :politics_economics_and_law
-  has_rich_text :philosophy_religion_and_magic
 
   validates :name, presence: true
 end

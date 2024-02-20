@@ -1,5 +1,6 @@
 export default interface Organization {
   child_ids: number[]
+  city_ids: number[]
   description: string
   id: number
   name: string

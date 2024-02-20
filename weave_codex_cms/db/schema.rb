@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_17_225138) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_20_053245) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -47,6 +47,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_225138) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.integer "population"
+    t.integer "domain_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["domain_id"], name: "index_cities_on_domain_id"
+  end
+
+  create_table "cities_organizations", id: false, force: :cascade do |t|
+    t.integer "city_id", null: false
+    t.integer "organization_id", null: false
+    t.index ["city_id", "organization_id"], name: "index_cities_organizations_on_city_id_and_organization_id"
+    t.index ["organization_id", "city_id"], name: "index_cities_organizations_on_organization_id_and_city_id"
   end
 
   create_table "domains", force: :cascade do |t|
@@ -99,6 +115,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_225138) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cities", "domains"
   add_foreign_key "organizations", "domains"
   add_foreign_key "organizations", "organizations", column: "parent_id"
 end

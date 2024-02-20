@@ -79,8 +79,6 @@ Visit http://127.0.0.1:3000
 
 #### Entities
 
-- [ ] City
-  * name
 - [ ] Individuals
   * name
 - [ ] Biome
