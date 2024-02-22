@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_20_065208) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_22_064502) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -105,7 +105,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_065208) do
     t.string "threat_model"
   end
 
-  create_table "floras", force: :cascade do |t|
+  create_table "flora", force: :cascade do |t|
     t.string "name"
     t.string "habitat"
     t.datetime "created_at", null: false

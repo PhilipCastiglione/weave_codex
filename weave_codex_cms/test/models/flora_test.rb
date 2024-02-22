@@ -2,7 +2,7 @@
 
 # == Schema Information
 #
-# Table name: floras
+# Table name: flora
 #
 #  id         :integer          not null, primary key
 #  habitat    :string

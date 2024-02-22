@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :cities
     resources :domains
     resources :faunas
-    resources :floras
+    resources :flora
     resources :organizations
     resources :species
 

@@ -59,7 +59,7 @@ class FloraDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how floras are displayed
+  # Overwrite this method to customize how flora are displayed
   # across all pages of the admin dashboard.
   #
   def display_resource(flora)
