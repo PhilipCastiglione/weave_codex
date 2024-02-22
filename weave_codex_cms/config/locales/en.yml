@@ -29,6 +29,8 @@
 
 en:
   administrate:
+    navigation:
+      back_to_app: "Home"
     field_hints:
       fauna:
         diet: "Diet types ref: https://en.wikipedia.org/wiki/List_of_feeding_behaviours"

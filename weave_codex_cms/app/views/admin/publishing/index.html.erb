@@ -1,5 +1,6 @@
 <header class="main-content__header">
-  <h1 class="main-content__page-title">Admin Dashboard</h1>
+  <h1 class="main-content__page-title">Publishing</h1>
+  <%= button_to "Publish", publish_admin_publishing_index_path %>
 </header>
 
 <section class="main-content__body main-content__body--flush">
@@ -15,13 +16,13 @@
       </tr>
     </thead>
     <tbody>
-      <% @stats.each do |record_stats| %>
-        <tr class="js-table-row" tabindex="0" role="link" data-url="<%= record_stats[:link] %>">
+      <% @models.each do |model| %>
+        <tr class="js-table-row" tabindex="0" role="link" data-url="<%= model[:link] %>">
           <td class="cell-data cell-data--string">
-            <a href="<%= record_stats[:link] %>" tabindex="-1" class="action-show"><%= record_stats[:name] %></a>
+            <a href="<%= model[:link] %>" tabindex="-1" class="action-show"><%= model[:name] %></a>
           </td>
           <td class="cell-data cell-data--number">
-            <a href="<%= record_stats[:link] %>" tabindex="-1" class="action-show"><%= record_stats[:count] %></a>
+            <a href="<%= model[:link] %>" tabindex="-1" class="action-show"><%= model[:count] %></a>
           </td>
         </tr>
       <% end %>

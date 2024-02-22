@@ -72,7 +72,6 @@ Visit http://127.0.0.1:3000
 ### Hygiene
 
 - [ ] tests
-- [ ] move publishing into an admin page, make the admin page the app root, remove back to app link
 
 ### Modelling
 

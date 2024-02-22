@@ -9,7 +9,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   #   inflect.plural /^(ox)$/i, "\\1en"
   #   inflect.singular /^(ox)en/i, "\\1"
   #   inflect.irregular "person", "people"
-  inflect.uncountable %w[flora fauna]
+  inflect.uncountable %w[flora fauna publishing]
 end
 
 # These inflection rules are supported but not enabled by default:
