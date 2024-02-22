@@ -15,26 +15,24 @@ Weave Codex has two components.
 
 The two components should agree on the data being structured according to some obvious conventions.
 
-## Data Structure
+## Common Data Structure
 
-* Structured (typed) text data, with a schema.
-* Media files (referenced by pointers in the text data)
+* Structured JSON for the entities constituting the codex
+* TypeScript declarations
+* Media files (referenced by pointers in the entities JSON data)
 
-Read/write from the CMS, read from the static website front end.
+Write from the CMS, read from the static website front end.
 
 ## CMS
 
 Rapid prototype using Ruby on Rails, using whatever libs get me there fastest.
 
-The CMS should ideally have a very basic publication pipeline so that I can make partial content changes without them being visible until I'm ready.
+The CMS should ideally have a publication pipeline so that I can make partial content changes without them being visible until they're ready.
 
 ## Static Site
 
-...
+Svelte(Kit) SSG SPA that shows off the public view of the data in a cool way on a layered map.
 
 ## TODO
 
-- [x] create the data folder structure
-- [x] rails new the cms
-- [x] pick something for the front end and initialise it
 - [ ] meta/config project files, root level entrypoint
