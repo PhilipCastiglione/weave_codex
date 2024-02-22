@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :characters
     resources :cities
     resources :domains
-    resources :faunas
+    resources :fauna
     resources :flora
     resources :organizations
     resources :species

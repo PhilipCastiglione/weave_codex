@@ -2,7 +2,7 @@
 
 # == Schema Information
 #
-# Table name: faunas
+# Table name: fauna
 #
 #  id           :integer          not null, primary key
 #  diet         :string
