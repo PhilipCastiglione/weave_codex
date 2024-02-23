@@ -16,6 +16,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
     cities: Field::HasMany,
     classification: Field::String,
     domain: Field::BelongsTo,
+    map_region: Field::String,
     membership_numbers: Field::Number,
     name: Field::String,
     parent: Field::BelongsTo,
@@ -32,6 +33,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
+    map_region
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,6 +41,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    map_region
     domain
     classification
     membership_numbers
@@ -56,6 +59,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
+    map_region
     domain
     classification
     membership_numbers

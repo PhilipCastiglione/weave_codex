@@ -5,6 +5,7 @@
 # Table name: cities
 #
 #  id         :integer          not null, primary key
+#  map_region :string
 #  name       :string
 #  population :integer
 #  created_at :datetime         not null

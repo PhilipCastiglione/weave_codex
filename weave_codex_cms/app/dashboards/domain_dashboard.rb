@@ -11,6 +11,7 @@ class DomainDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    map_region: Field::String,
     name: Field::String,
     rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     rich_text_philosophy_religion_and_magic: Field::Text, # TODO: change to rtf and add to form attributes
@@ -32,6 +33,7 @@ class DomainDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
+    map_region
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,6 +41,7 @@ class DomainDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    map_region
     species
     organizations
     cities
@@ -56,6 +59,7 @@ class DomainDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
+    map_region
     species
     organizations
     cities

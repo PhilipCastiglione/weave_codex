@@ -11,4 +11,5 @@ export default interface Organization {
   parent_id: number
   created_at: Date
   updated_at: Date
+  map_region: string
 }

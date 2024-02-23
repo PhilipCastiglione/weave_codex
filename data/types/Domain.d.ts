@@ -11,4 +11,5 @@ export default interface Domain {
   name: string
   created_at: Date
   updated_at: Date
+  map_region: string
 }

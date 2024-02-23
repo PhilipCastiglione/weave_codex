@@ -63,14 +63,16 @@ Visit http://127.0.0.1:3000
 
 - [ ] make rich text admininistrate fields work
   * support is coming shortly: https://github.com/thoughtbot/administrate/pull/2411
+  - [ ] ...maybe it's not that shortly, I can just add text fields and write html while waiting
 - [ ] publishing
   - [ ] enhance the workflow to indicate what is dirty/what will be published
   - [ ] versions & backups
 - [ ] string enums (...when I need one)
 - [ ] image fields/attachments
 
-### Hygiene
+### Hygiene, Fixes
 
+- [ ] declarations should reflection optionality
 - [ ] tests
 
 ### Modelling
@@ -90,7 +92,3 @@ Visit http://127.0.0.1:3000
 - [ ] Displayed, undisplayed
 - [ ] Time (n key points, not a slider)
 - [ ] Military
-
-#### Connections
-
-- [ ] MapRegion - should map something to an area on the map, at a given layer - probably drawn svgs? could be multiple

@@ -5,4 +5,5 @@ export default interface Flora {
   habitat: string
   created_at: Date
   updated_at: Date
+  map_region: string
 }

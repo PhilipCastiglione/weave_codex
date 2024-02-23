@@ -5,6 +5,7 @@
 # Table name: domains
 #
 #  id         :integer          not null, primary key
+#  map_region :string
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

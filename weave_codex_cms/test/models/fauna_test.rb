@@ -7,6 +7,7 @@
 #  id           :integer          not null, primary key
 #  diet         :string
 #  habitat      :string
+#  map_region   :string
 #  name         :string
 #  threat_model :string
 #  created_at   :datetime         not null

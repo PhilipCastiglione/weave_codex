@@ -12,6 +12,7 @@ class CityDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     domain: Field::BelongsTo,
+    map_region: Field::String,
     name: Field::String,
     organizations: Field::HasMany,
     population: Field::Number,
@@ -28,6 +29,7 @@ class CityDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
+    map_region
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,6 +37,7 @@ class CityDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    map_region
     domain
     organizations
     population
@@ -48,6 +51,7 @@ class CityDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
+    map_region
     domain
     organizations
     population
