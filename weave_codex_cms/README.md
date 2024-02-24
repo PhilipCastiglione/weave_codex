@@ -72,7 +72,6 @@ Visit http://127.0.0.1:3000
 
 ### Hygiene, Fixes
 
-- [ ] declarations should reflection optionality
 - [ ] tests
 
 ### Modelling
