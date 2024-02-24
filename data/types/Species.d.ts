@@ -4,7 +4,7 @@ export default interface Species {
   description: string
   id: number
   name: string
-  diet: string
+  diet?: string
   created_at: Date
   updated_at: Date
 }

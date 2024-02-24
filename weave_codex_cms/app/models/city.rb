@@ -29,4 +29,5 @@ class City < ApplicationRecord
   has_rich_text :description
 
   validates :name, presence: true
+  validates :population, presence: true
 end

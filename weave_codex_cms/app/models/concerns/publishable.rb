@@ -76,16 +76,16 @@ module Publishable
       end
     end
 
-    def inject_attribute_type_data(publishable_attributes) # rubocop:disable Metrics/MethodLength
+    def inject_attribute_type_data(publishable_attributes) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
       attribute_names.each do |attribute|
         if attribute_types[attribute].instance_of?(ActiveModel::Type::String)
-          publishable_attributes[attribute] = 'string'
+          publishable_attributes[attribute_with_suffix(attribute)] = 'string'
         elsif attribute_types[attribute].instance_of?(ActiveRecord::ConnectionAdapters::SQLite3Adapter::SQLite3Integer)
-          publishable_attributes[attribute] = 'number'
+          publishable_attributes[attribute_with_suffix(attribute)] = 'number'
         elsif attribute_types[attribute].instance_of?(
           ActiveRecord::AttributeMethods::TimeZoneConversion::TimeZoneConverter
         )
-          publishable_attributes[attribute] = 'Date'
+          publishable_attributes[attribute_with_suffix(attribute)] = 'Date'
         end
       end
     end
@@ -100,6 +100,12 @@ module Publishable
       types += "}\n"
 
       types
+    end
+
+    def attribute_with_suffix(attribute)
+      has_no_validators = validators_on(attribute).empty?
+      is_nullable = columns_hash[attribute].null
+      has_no_validators && is_nullable ? "#{attribute}?" : attribute
     end
   end
 end

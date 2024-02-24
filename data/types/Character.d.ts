@@ -7,7 +7,7 @@ export default interface Character {
   name: string
   species_id: number
   domain_id: number
-  organization_id: number
+  organization_id?: number
   created_at: Date
   updated_at: Date
 }

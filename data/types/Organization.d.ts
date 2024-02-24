@@ -6,10 +6,10 @@ export default interface Organization {
   id: number
   name: string
   classification: string
-  membership_numbers: number
+  membership_numbers?: number
   domain_id: number
-  parent_id: number
+  parent_id?: number
   created_at: Date
   updated_at: Date
-  map_region: string
+  map_region?: string
 }

@@ -6,6 +6,6 @@ export default interface Fauna {
   updated_at: Date
   diet: string
   habitat: string
-  threat_model: string
-  map_region: string
+  threat_model?: string
+  map_region?: string
 }

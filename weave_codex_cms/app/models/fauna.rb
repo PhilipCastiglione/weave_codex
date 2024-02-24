@@ -19,4 +19,6 @@ class Fauna < ApplicationRecord
   has_rich_text :description
 
   validates :name, presence: true
+  validates :diet, presence: true
+  validates :habitat, presence: true
 end

@@ -17,4 +17,5 @@ class Flora < ApplicationRecord
   has_rich_text :description
 
   validates :name, presence: true
+  validates :habitat, presence: true
 end

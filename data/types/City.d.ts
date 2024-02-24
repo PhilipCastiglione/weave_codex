@@ -7,5 +7,5 @@ export default interface City {
   domain_id: number
   created_at: Date
   updated_at: Date
-  map_region: string
+  map_region?: string
 }
