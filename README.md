@@ -36,3 +36,4 @@ Svelte(Kit) SSG SPA that shows off the public view of the data in a cool way on 
 ## TODO
 
 - [ ] meta/config project files, root level entrypoint
+- [ ] shoutout to https://inkarnate.com/

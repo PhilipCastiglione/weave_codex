@@ -39,10 +39,30 @@ You can preview the production build with `npm run preview`.
 
 ## TODO
 
-- [x] configure for SSG
-- [x] create a debug display that reads from the data
-- [ ] set up deployment via GH actions (https://kit.svelte.dev/docs/adapter-static & https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
-- [ ] read type data for entities
+### Features
+
+- [ ] basic UI scaffold
+- [ ] static assets (eg map images)
+- [ ] svgs ? for map links
+- [ ] icons for map links
+- [ ] layers/depths
+- [ ] models UI / legend
+- [ ] highlighted
+  - [ ] opacity levels
+- [ ] hidden / shown
+- [ ] zoom
+- [ ] select on map
+- [ ] hover on map
+- [ ] responsiveness?
+
+### Hygiene, Fixes
+
 - [ ] linting
 - [ ] formatting
 - [ ] tests
+- [ ] README
+
+### Deployment
+
+- [ ] build process
+- [ ] set up deployment via GH actions (https://kit.svelte.dev/docs/adapter-static & https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
