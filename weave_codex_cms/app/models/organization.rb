@@ -6,7 +6,7 @@
 #
 #  id                 :integer          not null, primary key
 #  classification     :string
-#  map_region         :string
+#  map_link           :string
 #  membership_numbers :integer
 #  name               :string
 #  created_at         :datetime         not null

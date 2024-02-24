@@ -12,7 +12,7 @@ class FloraDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     habitat: Field::String,
-    map_region: Field::String,
+    map_link: Field::String,
     name: Field::String,
     rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     created_at: Field::DateTime,
@@ -27,7 +27,7 @@ class FloraDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
-    map_region
+    map_link
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,7 +35,7 @@ class FloraDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
-    map_region
+    map_link
     habitat
     rich_text_description
     created_at
@@ -47,7 +47,7 @@ class FloraDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
-    map_region
+    map_link
     habitat
   ].freeze
 

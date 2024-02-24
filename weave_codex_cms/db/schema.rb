@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_24_073335) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -53,7 +53,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "map_region"
+    t.string "map_link"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -74,7 +74,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
     t.integer "domain_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "map_region"
+    t.string "map_link"
     t.index ["domain_id"], name: "index_cities_on_domain_id"
   end
 
@@ -89,7 +89,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "map_region"
+    t.string "map_link"
   end
 
   create_table "domains_species", id: false, force: :cascade do |t|
@@ -106,7 +106,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
     t.string "diet"
     t.string "habitat"
     t.string "threat_model"
-    t.string "map_region"
+    t.string "map_link"
   end
 
   create_table "flora", force: :cascade do |t|
@@ -114,7 +114,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
     t.string "habitat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "map_region"
+    t.string "map_link"
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -125,7 +125,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_23_071509) do
     t.integer "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "map_region"
+    t.string "map_link"
     t.index ["domain_id"], name: "index_organizations_on_domain_id"
     t.index ["parent_id"], name: "index_organizations_on_parent_id"
   end

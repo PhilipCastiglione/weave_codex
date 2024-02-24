@@ -7,5 +7,5 @@ export default interface Fauna {
   diet: string
   habitat: string
   threat_model?: string
-  map_region?: string
+  map_link?: string
 }

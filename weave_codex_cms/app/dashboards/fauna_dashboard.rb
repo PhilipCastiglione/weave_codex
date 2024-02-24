@@ -13,7 +13,7 @@ class FaunaDashboard < Administrate::BaseDashboard
     id: Field::Number,
     diet: Field::String,
     habitat: Field::String,
-    map_region: Field::String,
+    map_link: Field::String,
     name: Field::String,
     rich_text_description: Field::Text, # TODO: change to rtf and add to form attributes
     threat_model: Field::String,
@@ -29,7 +29,7 @@ class FaunaDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
-    map_region
+    map_link
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -37,7 +37,7 @@ class FaunaDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
-    map_region
+    map_link
     diet
     habitat
     threat_model
@@ -51,7 +51,7 @@ class FaunaDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
-    map_region
+    map_link
     diet
     habitat
     threat_model
