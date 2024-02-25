@@ -58,10 +58,11 @@ You can preview the production build with `npm run preview`.
 - [ ] zoom
 - [ ] select on map
 - [ ] hover on map
-- [ ] responsiveness?
 
 ### Hygiene, Fixes
 
+- [ ] use enhanced images properly
+- [ ] responsiveness?
 - [ ] favicon
 - [ ] set the webpage title
 - [ ] linting
