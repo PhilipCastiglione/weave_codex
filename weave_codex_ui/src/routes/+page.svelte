@@ -2,10 +2,18 @@
   import type Entities from '../../../data/types/Entities.d.ts';
   export let data: Entities;
 
+  import TopBar from './top_bar/TopBar.svelte';
+
   import allosV1 from './maps/allos_v1.jpeg';
   import underworldV1 from './maps/underworld_v1.jpeg';
 
-  let mapOptions = [
+  interface MapOption {
+    value: string;
+    id: string;
+    label: string;
+  }
+
+  let mapOptions: MapOption[] = [
     {
       value: allosV1,
       id: 'allos',
@@ -23,8 +31,9 @@
   $: selectedMapDescription = mapOptions.find((option) => option.value === selectedMap)?.label;
 </script>
 
-<h1>Weave</h1>
-<p>Go <a href="/about">about</a>...</p>
+<TopBar title="Weave">
+  <a href="/about" slot="link">About</a>
+</TopBar>
 
 {#each mapOptions as { value, id, label }}
   <p>
