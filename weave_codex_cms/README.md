@@ -67,12 +67,14 @@ Visit http://127.0.0.1:3000
 - [ ] publishing
   - [ ] enhance the workflow to indicate what is dirty/what will be published
   - [ ] versions & backups
-- [ ] string enums (...when I need one)
+- [ ] string enums (...if/when I need one)
 - [ ] image fields/attachments
 
 ### Hygiene, Fixes
 
 - [ ] tests
+- [ ] favicon
+- [ ] set the webpage title
 
 ### Modelling
 

@@ -46,9 +46,11 @@ You can preview the production build with `npm run preview`.
 ### Features
 
 - [ ] basic UI scaffold
+  - [ ] main page
+  - [ ] about page
 - [ ] static assets (eg map images)
-- [ ] svgs ? for map links
-- [ ] icons for map links
+- [ ] svg regions ? for map links
+- [ ] svg icons for map links
 - [ ] layers/depths
 - [ ] models UI / legend
 - [ ] highlighted
@@ -61,6 +63,8 @@ You can preview the production build with `npm run preview`.
 
 ### Hygiene, Fixes
 
+- [ ] favicon
+- [ ] set the webpage title
 - [ ] linting
 - [ ] tests
 - [ ] README
