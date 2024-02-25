@@ -47,7 +47,6 @@ You can preview the production build with `npm run preview`.
 
 - [ ] basic UI scaffold
   - [ ] main page
-  - [ ] about page
 - [ ] static assets (eg map images)
 - [ ] svg regions ? for map links
 - [ ] svg icons for map links
