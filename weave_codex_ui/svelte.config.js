@@ -15,7 +15,7 @@ const config = {
 			precompress: true,
 			strict: true
 		}),
-		paths:{
+		paths: {
 			base: process.argv.includes('dev') ? '' : '/weave_codex'
 		},
 	}
