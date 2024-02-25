@@ -45,12 +45,10 @@ You can preview the production build with `npm run preview`.
 
 ### Features
 
-- [ ] basic UI scaffold
-  - [ ] main page
-- [ ] static assets (eg map images)
+- [ ] fancy image management (show something and load high quality in the background then transition)
 - [ ] svg regions ? for map links
 - [ ] svg icons for map links
-- [ ] layers/depths
+- [ ] layers/depths for map links
 - [ ] models UI / legend
 - [ ] highlighted
   - [ ] opacity levels
