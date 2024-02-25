@@ -61,7 +61,6 @@ You can preview the production build with `npm run preview`.
 
 ### Hygiene, Fixes
 
-- [ ] use enhanced images properly
 - [ ] responsiveness?
 - [ ] favicon
 - [ ] set the webpage title
