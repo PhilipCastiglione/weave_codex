@@ -25,6 +25,10 @@ npm run dev
 npm run dev -- --open
 ```
 
+Formatting:
+
+Configure VS Code to use Svelte autoformatting, by downloading `svelte.svelte-vscode` and setting `"svelte.plugin.svelte.format.enable": true`.
+
 ## Building
 
 To create a production version of your app:
@@ -58,7 +62,6 @@ You can preview the production build with `npm run preview`.
 ### Hygiene, Fixes
 
 - [ ] linting
-- [ ] formatting
 - [ ] tests
 - [ ] README
 
